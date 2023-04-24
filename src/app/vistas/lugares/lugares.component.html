@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="card" *ngFor="let lugar of lugares">
+        <img src="{{ lugar.image }}" class="card-img-top" alt="Imagen de {{ lugar.name }}">
+        <div class="card-body">
+            <h5 class="card-title">#{{ lugar.id }} {{ lugar.name }}</h5>
+            <p class="card-text">Tipo: {{ lugar.type }}</p>
+            <p class="card-text">Dimension: {{ lugar.dimension }}</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<app-footer></app-footer>
+
+

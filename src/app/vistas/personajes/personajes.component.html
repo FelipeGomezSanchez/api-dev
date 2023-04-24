@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+          <div class="col">
+            <h1 class="mt-2 mb-5">Lista de personajes</h1>
+          </div>
+          <div class="col">
+            <div class="d-flex mt-3 mb-5">
+                <input  [(ngModel)]="myName" class="form-control me-2" type="text" placeholder="Buscar por nombre" aria-label="Search">
+                <button (click)="getCharacterByName(myName)" class="btn btn-outline-success" type="button" >Buscar</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div *ngFor="let personaje of personajes" class="col" >
+          <div class="card">
+            <img src="{{personaje.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">#{{personaje.id}} {{personaje.name}}</h5>
+              <p class="card-text">Especie: {{personaje.species}}</p>
+              <p class="card-text">Genero: {{personaje.gender}}</p>
+            </div>
+          </div> 
+        </div>
+      </div>
+</div>
+
+<app-footer></app-footer>

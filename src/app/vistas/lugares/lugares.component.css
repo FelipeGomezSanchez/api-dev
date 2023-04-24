@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    background-color: cadetblue;
+    height: fit-content;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+}
